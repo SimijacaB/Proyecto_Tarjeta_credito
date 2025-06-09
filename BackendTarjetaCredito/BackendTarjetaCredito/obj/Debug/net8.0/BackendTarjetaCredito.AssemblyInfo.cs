@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackendTarjetaCredito")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+854a472b8e4ac6cd3b223bf756ebdbddd910ac78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09f3223df7dfb22f2424d2a80f1ce5511a79ec82")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackendTarjetaCredito")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackendTarjetaCredito")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

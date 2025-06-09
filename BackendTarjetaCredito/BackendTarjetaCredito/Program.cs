@@ -1,4 +1,10 @@
+using BackendTarjetaCredito.DI;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Agregar dependencias y otros servicios
+var configuracion = builder.Configuration;
+builder.Services.AgregarDependencias(configuracion);
 
 // Add services to the container.
 
