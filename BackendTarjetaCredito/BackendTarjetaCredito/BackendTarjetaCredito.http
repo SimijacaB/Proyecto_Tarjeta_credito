@@ -1,0 +1,6 @@
+@BackendTarjetaCredito_HostAddress = http://localhost:5273
+
+GET {{BackendTarjetaCredito_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
