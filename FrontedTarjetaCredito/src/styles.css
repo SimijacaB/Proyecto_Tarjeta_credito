@@ -12,3 +12,14 @@ body {
     #8e0e00
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.titulo{	
+  font-family: "Savate", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+  
+
+}
