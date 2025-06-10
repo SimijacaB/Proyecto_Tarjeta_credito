@@ -13,9 +13,9 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="titulo">AGREGAR TARJETA</h5>
+          <h5 class="titulo">{{accion | uppercase }} TARJETA</h5>
 
-          <form [formGroup]="formulario" (ngSubmit)="agregarTarjeta()">
+          <form [formGroup]="formulario" (ngSubmit)="guardarTarjeta()">
             <div class="input-group input-group-lg mb-3">
               <span class="input-group-text"
                 ><i
@@ -108,17 +108,22 @@
           <h5 class="titulo">LISTADO DE TARJETAS</h5>
           <table class="table">
             <tbody>
-              @for (tarjeta of listarTarjetas; track tarjeta; let i = $index) {
+              @for (tarjeta of listarTarjetas; track tarjeta) {
               <tr>
                 <td>{{ tarjeta.titular }}</td>
                 <td>{{ tarjeta.numeroTarjeta }}</td>
                 <td>{{ tarjeta.fechaExpiracion }}</td>
                 <td>{{ tarjeta.cvv }}</td>
 
-                <td><i class="bi bi-pencil-square text-info"></i></td>
                 <td>
                   <i
-                    (click)="eliminarTarjeta(i)"
+                    (click)="editarTarjeta(tarjeta)"
+                    class="bi bi-pencil-square text-info"
+                  ></i>
+                </td>
+                <td>
+                  <i
+                    (click)="eliminarTarjeta(tarjeta.id)"
                     class="bi bi-trash text-danger"
                   ></i>
                 </td>

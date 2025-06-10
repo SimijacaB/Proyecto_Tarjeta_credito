@@ -1,27 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { TarjetaService } from '../../services/tarjeta/tarjeta-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tarjeta-credito',
-  imports: [ReactiveFormsModule],
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './tarjeta-credito.html',
   styleUrl: './tarjeta-credito.css'
 })
 export class TarjetaCredito implements OnInit {
 
-  listarTarjetas: any[] = [
-    { titular: 'Yesika Simijaca', numeroTarjeta: '6757234846868678', fechaExpiracion: '11/24', cvv: '123' },
-    { titular: 'Liliana Beltrán', numeroTarjeta: '6757234846868678', fechaExpiracion: '11/24', cvv: '876' },
-    { titular: 'Simón Padrón', numeroTarjeta: '68765434565445678', fechaExpiracion: '12/26', cvv: '456' },
-    { titular: 'Andrés Gaviria', numeroTarjeta: '787664574636777', fechaExpiracion: '12/26', cvv: '876' }
-  ];
+  listarTarjetas: any[] = [];
+  accion = "agregar";
+  id: number | undefined;
 
   formulario: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private _tarjetaService: TarjetaService
   ) {
     this.formulario = this.fb.group({
       titular: ['', Validators.required],
@@ -32,30 +33,75 @@ export class TarjetaCredito implements OnInit {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.obtenerTarjetas()
   }
 
-  agregarTarjeta() {
+  obtenerTarjetas() {
+    this._tarjetaService.getListTarjeta().subscribe(data => {
+      console.log(data)
+      this.listarTarjetas = data;
+    }, error => {
+      console.log(error)
+    })
+  }
+
+  guardarTarjeta() {
     if (this.formulario.valid) {
       const tarjeta: any = {
         titular: this.formulario.get('titular')?.value,
         numeroTarjeta: this.formulario.get('numeroTarjeta')?.value,
         fechaExpiracion: this.formulario.get('fechaExpiracion')?.value,
         cvv: this.formulario.get('cvv')?.value
-      };
+      }
 
-      this.listarTarjetas.push(tarjeta);
-      this.formulario.reset();
-      this.toastr.success('Tarjeta agregada exitosamente', 'Éxito');
-    } else {
-      this.toastr.error('Por favor complete todos los campos correctamente', 'Error');
+      if (this.id == undefined) {
+        //this.listarTarjetas.push(tarjeta);
+        this._tarjetaService.saveTarjeta(tarjeta).subscribe(data => {
+          this.formulario.reset();
+          this.toastr.success('Tarjeta agregada exitosamente', 'Éxito');
+        }, error => {
+          this.toastr.error("Opss ... ocurrió un error", "Error")
+          console.log(error)
+        })
+
+      } else {
+        //Editamos tarjeta
+        tarjeta.id = this.id
+        this._tarjetaService.updateTarjeta(this.id, tarjeta).subscribe(data => {
+          this.formulario.reset()
+          this.accion = 'Agregar'
+          this.id = undefined
+          this.toastr.info('La tarjeta fue actuaizada con éxito!', 'Tarjeta Actualizada')
+          this.obtenerTarjetas()
+        }, error => {
+          console.log(error)
+        })
+      }
     }
   }
 
-  eliminarTarjeta(index: number) {
-    this.listarTarjetas.splice(index, 1)
-    this.toastr.error('La tarjeta se eliminó con éxito!', 'Tarjeta Eliminada!')
-
+  eliminarTarjeta(id: number) {
+    this._tarjetaService.deleteTarjeta(id).subscribe(data => {
+      this.toastr.error('La tarjeta se eliminó con éxito!', 'Tarjeta Eliminada!')
+      this.obtenerTarjetas();
+    }, error => {
+      console.log(error)
+    })
   }
 
+  editarTarjeta(tarjeta: any) {
+    this.accion = "Editar";
+    this.id = tarjeta.id;
+
+    this.formulario.patchValue({
+      titular: tarjeta.titular,
+      numeroTarjeta: tarjeta.numeroTarjeta,
+      fechaExpiracion: tarjeta.fechaExpiracion,
+      cvv: tarjeta.cvv
+    })
+  }
+
+
 }
+
+

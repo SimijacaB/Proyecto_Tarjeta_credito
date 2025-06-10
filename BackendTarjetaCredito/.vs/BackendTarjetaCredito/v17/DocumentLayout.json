@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|c:\\users\\yesika simijaca\\onedrive\\documentos\\proyectos personales\\proyectos_csharp\\proyecto_tarjeta_credito\\backendtarjetacredito\\backendtarjetacredito\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|solutionrelative:backendtarjetacredito\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|c:\\users\\yesika simijaca\\onedrive\\documentos\\proyectos personales\\proyectos_csharp\\proyecto_tarjeta_credito\\backendtarjetacredito\\backendtarjetacredito\\controllers\\tarjetacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|solutionrelative:backendtarjetacredito\\controllers\\tarjetacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|c:\\users\\yesika simijaca\\onedrive\\documentos\\proyectos personales\\proyectos_csharp\\proyecto_tarjeta_credito\\backendtarjetacredito\\backendtarjetacredito\\models\\tarjetacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|solutionrelative:backendtarjetacredito\\models\\tarjetacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF08E649-BC36-4397-93A3-3229EAD254F8}|BackendTarjetaCredito\\BackendTarjetaCredito.csproj|c:\\users\\yesika simijaca\\onedrive\\documentos\\proyectos personales\\proyectos_csharp\\proyecto_tarjeta_credito\\backendtarjetacredito\\backendtarjetacredito\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,47 +57,60 @@
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\Program.cs",
-              "RelativeDocumentMoniker": "BackendTarjetaCredito\\Program.cs",
-              "ToolTip": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\Program.cs",
-              "RelativeToolTip": "BackendTarjetaCredito\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T04:17:27.806Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TarjetaCredito.cs",
+              "DocumentMoniker": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\Models\\TarjetaCredito.cs",
+              "RelativeDocumentMoniker": "BackendTarjetaCredito\\Models\\TarjetaCredito.cs",
+              "ToolTip": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\Models\\TarjetaCredito.cs",
+              "RelativeToolTip": "BackendTarjetaCredito\\Models\\TarjetaCredito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T00:17:23.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TarjetaController.cs",
+              "DocumentMoniker": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\Controllers\\TarjetaController.cs",
+              "RelativeDocumentMoniker": "BackendTarjetaCredito\\Controllers\\TarjetaController.cs",
+              "ToolTip": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\Controllers\\TarjetaController.cs",
+              "RelativeToolTip": "BackendTarjetaCredito\\Controllers\\TarjetaController.cs",
+              "ViewState": "AgIAADUAAAAA0GVmZmbmv0sAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T16:07:36.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "BackendTarjetaCredito\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\ApplicationDbContext.cs",
               "RelativeToolTip": "BackendTarjetaCredito\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T04:13:30.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InyeccionDependencias.cs",
               "DocumentMoniker": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\DI\\InyeccionDependencias.cs",
               "RelativeDocumentMoniker": "BackendTarjetaCredito\\DI\\InyeccionDependencias.cs",
               "ToolTip": "C:\\Users\\Yesika Simijaca\\OneDrive\\Documentos\\Proyectos personales\\Proyectos_CSharp\\Proyecto_Tarjeta_credito\\BackendTarjetaCredito\\BackendTarjetaCredito\\DI\\InyeccionDependencias.cs",
               "RelativeToolTip": "BackendTarjetaCredito\\DI\\InyeccionDependencias.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T03:53:08.93Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }

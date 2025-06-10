@@ -14,7 +14,7 @@ namespace BackendTarjetaCredito.Models
         public string NumeroTarjeta { get; set; }
 
         [Required]
-        public string FechaExpedicion { get; set; }
+        public string FechaExpiracion { get; set; }
 
         [Required]
         public string cvv { get; set; }

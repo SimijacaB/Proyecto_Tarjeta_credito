@@ -8,7 +8,7 @@ namespace BackendTarjetaCredito.DI
                                                            IConfiguration configuracion)
         {
             servicios.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuracion.GetConnectionString("Festivos")));
+                options.UseSqlServer(configuracion.GetConnectionString("DevConnection")));
 
             return servicios;
         }
